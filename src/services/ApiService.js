@@ -12,10 +12,11 @@ instance.interceptors.request.use((config) => {
 });
 
 export default {
-  search(q) {
+  searchPackages(params) {
     return instance({
-      url: `search?q=${q}`,
+      url: "search",
       method: "get",
+      params,
     });
   },
 };
