@@ -1,14 +1,14 @@
 <template>
   <v-app>
-    <v-app-bar app color="secondary" dark>
+    <v-app-bar app dark>
       <div class="d-flex align-center">
         <v-img
-          alt="Nethernite Logo"
+          alt="NPM Logo"
           class="shrink mr-2"
           contain
-          :src="require('./assets/nethernite.svg')"
+          :src="require('./assets/npm.png')"
           transition="scale-transition"
-          width="150"
+          width="100"
         />
       </div>
 
@@ -18,15 +18,17 @@
     <v-main>
       <router-view />
     </v-main>
+    <app-footer></app-footer>
   </v-app>
 </template>
 
 <script>
+import Footer from "@/components/Footer";
+
 export default {
   name: "App",
-
-  data: () => ({
-    //
-  }),
+  components: {
+    "app-footer": Footer,
+  },
 };
 </script>
